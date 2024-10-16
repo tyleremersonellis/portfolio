@@ -1,0 +1,169 @@
+
+
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+     <link rel="icon" href="../assets/images/TylerEllisicon.JPG" />
+     <title>Tyler Ellis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <span class="nav-title">Tyler Ellis</span>
+        <a class="button" href="mailto:tyler.emerson.ellis@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+          <!-- 
+            TODO
+
+            - Change the 'main-title' text to the name of your project
+            - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
+            - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
+          -->
+        <div class="main-title">Fishing Lure Design</div>
+        <div class="body-text">How vorticies can enhance lure movement!</div>
+        <image class="project-header-image" src="../assets/images/cfdimage.png">
+          <span class="image-caption">CFD simulation run on blunt 3D part made in SOLIDWORKS.  </span>
+          <br><br>
+
+      <!-- PROJECT DETAILS -->
+      <!-- 
+        TODO
+
+        - Change the 'subheader-text' to whatever header you want for project details
+        - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
+      -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details / Background</div>
+        <div class="project-details-content">
+          <div class="body-text"> One day while attending my fluid dynamics class we covered an interesting phenmena called the Kármán vortex street - a beautiful
+            vortex shedding pattern that forms behind a blunt object in a fluid flow. It amazed me how this chaotic oscillating vortex pattern could be so unique, yet predictable.
+             This led me down a rabbit hole of research after class where I found myself digging deeper into research and watching videos of this unique flow pattern in action.
+
+             During my deep dive, I came across something fascinating: fish in rivers and streams often position themselves downstream of rocks and other obstacles to ride
+              the trailing Kármán vortex street. By riding these vortices, the fish conserve energy by letting the oscillating flow move their body!<br><br>
+
+              This got me thinking if fish use Kármán vortex streets to their advantage, could I find a way to apply this flow phenomenon in other areas? One idea I came up with
+               was to design a small device that could be tied in front of a fishing lure to generate a Kármán vortex street, encouraging the lure to oscillate side-to-side, just 
+               like a swimming baitfish or worm. <br><br>
+
+               <b>Bringing the Concept to Life in SOLIDWORKS</b><br>
+               To test this idea, I decided to model a series of "wake-making" parts in SOLIDWORKS and run Computational Fluid Dynamics (CFD) simulations using the software’s 
+               built-in CFD tools. The goal was to visualize how each shape influenced the formation of the vortex street's oscillating flow pattern.<br><br>
+               
+               I created some different variations of the part in CAD and came up with an "acorn-shaped" design and another "flate-plate" design.
+               I then set up the CFD simulations to see how water would flow around these shapes at velocities around that of an average fishing line reel re-spool speed.
+               The the simulation results are shown below.<br><br>
+               
+               While I haven't yet had the chance to build and test these prototypes in real-life, this project was valuable in learning more about fluid flows, 
+               CFD simulations, and their practical applications to engineering design. <br><br>
+          </div>
+
+
+      <!-- IMAGE GALLERY -->
+      <div id="project-gallery">
+        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
+        <div class="subheader-text">Video Gallery</div>
+        <div class="project-gallery-content">
+
+
+          <video controls="controls" height="100%" width="100%" name="Load Simulating Actuator" style="border-radius: 10px; margin-left: 15px;" autoplay controls muted>
+            <source src="../assets/videos/disk.mp4">
+          </video>
+          <div class="body-text"><b>Video 1:</b> 1-inch acorn shaped cap modeled in Solidworks showing the karman vortex street shed pattern.
+            Video played at 2x speed and 1x speed.
+          </div> <br><br>
+
+
+          <video controls="controls" height="100%" width="100%" name="Load Simulating Actuator" style="border-radius: 10px; margin-left: 15px;" autoplay controls muted>
+            <source src="../assets/videos/rect.mp4">
+          </video>
+          <div class="body-text"><b>Video 2:</b> 0.4-inch flat plate modeled in Solidworks also exhibits the karman vortex street shed pattern.
+            Video played at 1x speed.</div>
+            <!-- 
+              TODO
+
+              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+
+              Full Width Image:
+
+                <div class="gallery-image-container">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              Half Width Image: 
+
+                <div class="gallery-image-container half-width">
+                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
+                  <span class="image-caption">IMAGE_CAPTION</span>
+                </div>
+
+              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
+                  - IMAGE_NAME: the name of the image file in assets/images
+                  - IMAGE_CAPTION: to the caption of the image
+            -->
+            <!--<div class="gallery-image-container half-width">
+              <img src="../assets/images/bbc_assembly.jpg" class="gallery-image">
+              <span class="image-caption">The computer without the control logic assembled</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/bbc.jpg" class="gallery-image">
+              <span class="image-caption">The clock and register A being assembled</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/bbc_ram.jpg" class="gallery-image">
+              <span class="image-caption">Computer with memory assembly</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <video controls="controls" name="bbc" style="border-radius: 10px; float:right; margin-left: 15px;" autoplay controls muted>
+                <source src="../assets/videos/bbc.MOV">
+              </video>
+              <span class="image-caption">Binary counting with just the ALU and Registers</span>
+            </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <a class="icon-link" target="_blank" href="https://linkedin.com/in/tylerellisvt">
+        <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" href="mailto:tyler.emerson.ellis@gmail.com">
+        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="assets/resume/ResumeTylerEllis.pdf">
+        <image src="../assets/icons/document.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
+</html>

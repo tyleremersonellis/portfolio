@@ -48,10 +48,12 @@
             - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
           -->
         <div class="main-title">Tiny Electric Boat</div>
-        <div class="body-text">A tiny electric boat built with my brother during the summer of 2022.</div>
-        <iframe width="100%" height="600" src="https://www.youtube.com/embed/nEY7kIRA39c" style="border-radius: 10px; margin-left: 15px;"></iframe>
-      </div>
-
+        <div class="body-text">A tiny electric boat I designed and built during the summer of 2022.</div>
+        <video id="vid1" width="100%" height="100%" controls poster="../assets/images/thumbnail.jpg" >
+        <source src="../assets/videos/snippedvideo.mp4" style="border-radius: 10px; margin-left: 15px;">
+      </video>
+      <span class="image-caption">Video taking the mini boat out on the water.  </span>
+      <br><br>
       <!-- PROJECT DETAILS -->
       <!-- 
         TODO
@@ -59,6 +61,49 @@
         - Change the 'subheader-text' to whatever header you want for project details
         - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
       -->
+      <div id="project-details">
+        <div class="subheader-text">Project Details / Background</div>
+        <div class="project-details-content">
+          <div class="body-text"> After graduating with a degree in Ocean Engineering from Virginia Tech, I wanted to get some hands-on design experience 
+            and put my knowledge to the test. It’s one thing to learn about naval architecture and engineering principles in class, but I wanted to 
+            see how I could apply what I learned to a real life design. So, I decided to build my own 6.5 ft electric plywood boat!<br><br>
+
+            This project took me about two months from start to finish. I designed and built the boat completely from scratch, working out of my garage. 
+            The main requirements I set for myself were that the boat needed to be small enough to fit inside my Honda CRV, it had to be electric powered 
+            so that I could take it out on my community's lakes, and I wanted it to have the look and aesthetics of a classic vintage wooden boat.<br><br>
+            
+            <b>From Concept to CAD: Turning Ideas into Plans</b><br>
+            I started the design by conducting some comparative naval architecture. I began by looking at different hull shapes, configurations, and aeshtetics I liked best 
+            and compiled these design characteristics into a vision board. From these images, I sketched a preliminary design of the hull shape. Next, I created a stack-up length
+            diagram using the space requirements of all the essential elements of the boat (such as the battery, motor, passenger seat, etc) to derive a minimum boat length 
+             and an overall length of the boat. <br><br>
+            
+            From there, I did a buoyancy check to ensure the hull had enough internal volume to carry the weight of me, a passenger, and all the essential elements with margin.
+            Then I laid out the primary structural members and made a CAD drawing of the design. I also ran a righting-arm curve stability analysis to ensure the boat would 
+            be safe up to a heel angle of at least 25-deg while fully loaded. Once I completed the CAD design, I transitioned to the hands-on work.<br><br>
+            
+            <b>The Building Process: Cutting, Assembling, and Fiberglassing</b><br>
+            With all the measurements in CAD, I cut the plywood pieces to size and started assembling the frame. It was really rewarding seeing the structure come together 
+            nearly identical to the CAD drawing I had designed.<br><br>
+            
+            After the basic wood hull structure was built, I moved on to the fiberglass and epoxy work. The layup work went smoothly as I was familiar with
+            the wet layup process from my time on the Virginia Tech Human Powered Submarine design team.<br><br>
+            
+            <b>Electrical and Control Systems: Bringing It All to Life</b><br>
+            Once the hull was complete, I transitioned my attention to the electronics and controls. I installed an electric trolling motor, battery, and a custom control system -
+            similar to the steering system used on a soapbox derby car. It took some trial and error to get everything working smoothly, but finally, I was able to wire
+             everything up so the motor responded to the throttle controls and to get the boat steering tolerances smooth and without overshoot.<br><br>
+            
+            <b>The Finished Product: A Mini, Classic Electric Boat</b><br>
+            After two months of work, the boat was finally complete! It fit perfectly inside the back of my Honda CRV, and when I 
+            took it out for a test run, it moved through the water well (and without any leaks!). To finish the project off I made a dolly out of PVC pipe and recycled bike tires
+            to help maneuver the boat from the car, out to the lake. It was a very fulfilling experience to see this project go from an idea
+             in my head to a physical functioning mini-boat! <br><br>
+            
+            Building this boat gave me invaluable hands-on experience and solidified the value of many of the concepts I had learned during my time at Virginia Tech. 
+            Time for boat number two!
+          </div>
+
 
       <!-- IMAGE GALLERY -->
       <div id="project-gallery">
@@ -89,8 +134,48 @@
                   - IMAGE_CAPTION: to the caption of the image
             -->
             <div class="gallery-image-container half-width">
+              <img src="../assets/images/IMG_4408.jpg" class="gallery-image">
+              <span class="image-caption">Stackup-like diagram to guide the minimum hull dimensions.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/IMG_4437.jpg" class="gallery-image">
+              <span class="image-caption">Rhino 3D model showing main structural members.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/heel.jpg" class="gallery-image">
+              <span class="image-caption">Heeling arm curve calculated in Orca 3D.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/IMG_4463.jpg" class="gallery-image">
+              <span class="image-caption">Measuring parts from CAD drawing.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/IMG_4553.jpg" class="gallery-image">
+              <span class="image-caption">Deck panel layout.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/boat_build.jpg" class="gallery-image">
+              <span class="image-caption">Installed the frames.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/IMG_4589.jpg" class="gallery-image">
+              <span class="image-caption">Bending wood around the frame.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/IMG_4638.jpg" class="gallery-image">
+              <span class="image-caption">Wood hull complete.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/IMG_4841.jpg" class="gallery-image">
+              <span class="image-caption">Sketch of control system layout.</span>
+            </div>
+            <div class="gallery-image-container half-width">
               <img src="../assets/images/boat_car.jpg" class="gallery-image">
               <span class="image-caption">The boat was designed to fit in a car.</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/boat_float.jpg" class="gallery-image">
+              <span class="image-caption">The boat floats.</span>
             </div>
             <div class="gallery-image-container half-width">
               <video controls="controls" name="boat" style="border-radius: 10px; float:right; margin-left: 15px;" autoplay controls muted>
@@ -98,35 +183,20 @@
               </video>
               <span class="image-caption">My brother test riding the boat for the first time.</span>
             </div>
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/boat_float.jpg" class="gallery-image">
-              <span class="image-caption">The boat floats.</span>
-            </div>
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/heel.jpg" class="gallery-image">
-              <span class="image-caption">Heeling arm curve calculated in Orca 3D.</span>
-            </div>
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/boat_build.jpg" class="gallery-image">
-              <span class="image-caption">Installed the frames.</span>
-            </div>
         </div>
       </div>
     </div>
 
     <!-- FOOTER -->
     <div id="footer">
-      <a class="icon-link" href="https://github.com/hunterwellis">
-        <image src="../assets/icons/github.svg" class="footer-icon"/>
-      </a>
-      <a class="icon-link" target="_blank" href="https://instagram.com/elliswhunter">
-        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
-      </a>
-      <a class="icon-link" target="_blank" href="https://linkedin.com/in/hunterwayneellis">
+      <a class="icon-link" target="_blank" href="https://linkedin.com/in/tylerellisvt">
         <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
       </a>
-      <a class="icon-link" href="mailto:hunterellis@vt.edu">
+      <a class="icon-link" href="mailto:tyler.emerson.ellis@gmail.com">
         <image src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="assets/resume/ResumeTylerEllis.pdf">
+        <image src="../assets/icons/document.svg" class="footer-icon"/>
       </a>
     </div>
 
