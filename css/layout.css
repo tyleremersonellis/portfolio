@@ -15,27 +15,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
-/* Main Page Layout */
+/* ===========================
+   MAIN PAGE LAYOUT
+   =========================== */
 
 #main-content {
-  margin: 225px 425px;
+  margin: 100px 425px; /* reduced top margin for smaller gap */
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 55px; /* reduced gap between sections */
 }
 
+.container {
+  display: flex;
+}
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.text {
+  font-size: 20px;
+  padding-left: 15px;
+}
 
-/* Portfolio Header */
+/* ===========================
+   PORTFOLIO HEADER
+   =========================== */
 
 #portfolio-header {
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-bottom: 50px; /* smaller space before next section */
 }
 
 #portfolio-header-image-container {
@@ -67,25 +81,26 @@ body {
   gap: 16px;
 }
 
-
-/* About Section */
+/* ===========================
+   ABOUT SECTION
+   =========================== */
 
 #about-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-top: 0; /* remove extra top margin */
 }
 
 .about-section-content {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 20px; /* slightly smaller gap */
 }
 
-
-
-
-/* Project Section */
+/* ===========================
+   PROJECT / MY WORK SECTION
+   =========================== */
 
 #my-work-section {
   display: flex;
@@ -99,117 +114,86 @@ body {
   flex-wrap: wrap;
 }
 
-    /* Project Cards */
-
-    .project-card {
-      max-width: calc((100% - 32px) / 3);
-      display: flex;
-      flex-direction: column;
-      gap: 34px;
-    }
-
-    .project-card-text-container {
-      flex-direction: column;
-      display: flex;
-      gap: 16px
-    }
-
-    .project-image {
-      border-radius: 10px;
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-
-
-
-/* Project Pages */
-
-#project-header {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.project-header-image {
-  border-radius: 20px;
-  width: 100%;
-  height: auto;
-}
-
-#project-details {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.project-details-content {
+.project-card {
+  max-width: calc((100% - 32px) / 3);
   display: flex;
   flex-direction: column;
   gap: 34px;
 }
 
-    /* Project Gallery */
+.project-card-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-    #project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+.project-image {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
 
-    .project-gallery-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 34px 16px;
-    }
+/* ===========================
+   NAVBAR
+   =========================== */
 
-    .gallery-image-container {
-      border-radius: 10px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+.navbar {
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent; /* desktop default */
+  z-index: 9999;
+}
 
-    .gallery-image-container.half-width {
-      width: calc((100% - 16px) / 2);
-    }
+.nav-title-link {
+  color: black;
+  text-decoration: none;
+}
 
-    .gallery-image {
-      border-radius: 10px;
-      width: 100%;
-      height: auto;
-    }
+.nav-title-link:hover {
+  text-decoration: underline;
+}
 
+/* ===========================
+   FOOTER
+   =========================== */
 
-/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
+#footer {
+  width: 100%;
+  display: flex;
+  padding: 30px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===========================
+   RESPONSIVE MEDIA QUERIES
+   =========================== */
+
+/* Medium / small laptops */
 @media only screen and (max-width: 1600px) {
-  #main-content {
-    margin: 225px 275px;
-  }
+  #main-content { margin: 100px 275px; }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1200px) {
-  #main-content {
-    margin: 225px 175px;
-  }
+  #main-content { margin: 100px 175px; }
 }
 
-/* Large devices (laptops/desktops, 1000px and below) */
 @media only screen and (max-width: 1000px) {
-  #main-content {
-    margin: 225px 75px;
-  }
+  #main-content { margin: 100px 75px; }
 }
 
-/* Small devices (portrait tablets and large phones, 800px and below) */
+/* Tablets / small devices */
 @media only screen and (max-width: 800px) {
-  #main-content {
-    margin: 150px 50px;
-  }
+  #main-content { margin: 80px 50px; }
 
   #portfolio-header {
     flex-direction: column;
@@ -218,38 +202,20 @@ body {
   .project-card {
     max-width: calc((100% - 16px) / 2);
   }
+
+  .navbar {
+    background-color: white !important; /* mobile navbar always white */
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
-  #main-content {
-    margin: 125px 20px;
-  }
-
-  .project-card {
-    max-width: 100%;
-  }
+  #main-content { margin: 70px 20px; }
+  .project-card { max-width: 100%; }
 }
 
-.container {
-  display: flex;
- }
- 
- img {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;                  
- }
- 
- .text {
-   font-size: 20px;
-   padding-left: 15px;
- }
-/* ================================
-   Mobile fix for text + card stacking
-   ================================ */
+/* Final mobile adjustments for <=768px */
 @media only screen and (max-width: 768px) {
-  /* Stack portfolio header text + image vertically */
+
   #portfolio-header {
     flex-direction: column;
   }
@@ -259,48 +225,11 @@ body {
     flex-basis: 100%;
   }
 
-  /* Ensure paragraphs and text boxes are readable */
-  .text {
-    font-size: 18px;
-    line-height: 1.45;
-    padding-left: 0;
-  }
-
-  /* If any cards are flex children, make them full width */
-  .project-card {
-    max-width: 100%;
-  }
-}
-
-/* Force image and text containers to full width on mobile */
-@media only screen and (max-width: 768px) {
-  #portfolio-header-image-container,
-  #portfolio-header-text-container {
-    flex-basis: 100%;
-  }
-}
-
-/* ================================
-   Final Mobile Styles (<=768px)
-   ================================ */
-@media only screen and (max-width: 768px) {
-
-  /* Stack portfolio header vertically */
-  #portfolio-header {
-    flex-direction: column;
-  }
-
-  #portfolio-header-image-container,
-  #portfolio-header-text-container {
-    flex-basis: 100%;
-  }
-
-  /* Stack container children vertically */
   .container {
     flex-direction: column;
   }
 
-  /* Make text, image, and icon full width */
+  /* Text and images full width */
   .text,
   .image,
   .icon-link {
@@ -308,35 +237,31 @@ body {
     max-width: 100%;
   }
 
-  /* Paragraph styling */
+  /* Timeline / stacked text adjustments */
   .text {
     padding-left: 0;
     line-height: 1.45;
     font-size: 18px;
-    order: 1;  /* buttons/text first */
+    order: unset;
   }
 
-  /* Swap linked image and buttons */
   .icon-link {
-    order: 2;       /* linked image after buttons */
+    order: unset;
     float: none !important;
     display: block;
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
     margin-left: 0 !important;
   }
 
-  /* Left-align linked image and icon */
   .icon-link img,
   .container .image img {
-    float: none !important;    /* cancel inline float */
+    float: none !important;
     display: block;
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
     margin-left: 0 !important;
   }
 
-  /* Project cards full width */
   .project-card {
     max-width: 100%;
   }
-
 }

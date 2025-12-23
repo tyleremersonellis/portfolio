@@ -1,10 +1,21 @@
+function scrollWithOffset(id) {
+  const element = document.getElementById(id);
+  const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+  // Scroll position exactly below the navbar
+  const y = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
 if (document.getElementById('my-work-link')) {
   document.getElementById('my-work-link').addEventListener('click', () => {
-    document.getElementById('my-work-section').scrollIntoView({behavior: "smooth"})
-  })
+    scrollWithOffset('my-work-section');
+  });
 }
+
 if (document.getElementById('about-section-link')) {
   document.getElementById('about-section-link').addEventListener('click', () => {
-    document.getElementById('about-section').scrollIntoView({behavior: "smooth"})
-  })
+    scrollWithOffset('about-section');
+  });
 }
