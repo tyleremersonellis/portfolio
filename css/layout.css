@@ -245,3 +245,98 @@ body {
    font-size: 20px;
    padding-left: 15px;
  }
+/* ================================
+   Mobile fix for text + card stacking
+   ================================ */
+@media only screen and (max-width: 768px) {
+  /* Stack portfolio header text + image vertically */
+  #portfolio-header {
+    flex-direction: column;
+  }
+
+  #portfolio-header-image-container,
+  #portfolio-header-text-container {
+    flex-basis: 100%;
+  }
+
+  /* Ensure paragraphs and text boxes are readable */
+  .text {
+    font-size: 18px;
+    line-height: 1.45;
+    padding-left: 0;
+  }
+
+  /* If any cards are flex children, make them full width */
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+/* Force image and text containers to full width on mobile */
+@media only screen and (max-width: 768px) {
+  #portfolio-header-image-container,
+  #portfolio-header-text-container {
+    flex-basis: 100%;
+  }
+}
+
+/* ================================
+   Final Mobile Styles (<=768px)
+   ================================ */
+@media only screen and (max-width: 768px) {
+
+  /* Stack portfolio header vertically */
+  #portfolio-header {
+    flex-direction: column;
+  }
+
+  #portfolio-header-image-container,
+  #portfolio-header-text-container {
+    flex-basis: 100%;
+  }
+
+  /* Stack container children vertically */
+  .container {
+    flex-direction: column;
+  }
+
+  /* Make text, image, and icon full width */
+  .text,
+  .image,
+  .icon-link {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Paragraph styling */
+  .text {
+    padding-left: 0;
+    line-height: 1.45;
+    font-size: 18px;
+    order: 1;  /* buttons/text first */
+  }
+
+  /* Swap linked image and buttons */
+  .icon-link {
+    order: 2;       /* linked image after buttons */
+    float: none !important;
+    display: block;
+    margin: 10px 0 10px 0;
+    margin-left: 0 !important;
+  }
+
+  /* Left-align linked image and icon */
+  .icon-link img,
+  .container .image img {
+    float: none !important;    /* cancel inline float */
+    display: block;
+    margin: 10px 0 10px 0;
+    margin-left: 0 !important;
+  }
+
+  /* Project cards full width */
+  .project-card {
+    max-width: 100%;
+  }
+
+}
