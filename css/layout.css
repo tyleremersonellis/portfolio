@@ -15,41 +15,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===========================
-   MAIN PAGE LAYOUT
-   =========================== */
+
+
+
+/* Main Page Layout */
 
 #main-content {
-  margin: 100px 425px; /* reduced top margin for smaller gap */
+  margin: 225px 425px;
   display: flex;
   flex-direction: column;
-  gap: 55px; /* reduced gap between sections */
+  gap: 200px;
 }
 
-.container {
-  display: flex;
-}
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.text {
-  font-size: 20px;
-  padding-left: 15px;
-}
 
-/* ===========================
-   PORTFOLIO HEADER
-   =========================== */
+/* Portfolio Header */
 
 #portfolio-header {
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-bottom: 50px; /* smaller space before next section */
 }
 
 #portfolio-header-image-container {
@@ -81,26 +67,25 @@ img {
   gap: 16px;
 }
 
-/* ===========================
-   ABOUT SECTION
-   =========================== */
+
+/* About Section */
 
 #about-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 0; /* remove extra top margin */
 }
 
 .about-section-content {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* slightly smaller gap */
+  gap: 34px;
 }
 
-/* ===========================
-   PROJECT / MY WORK SECTION
-   =========================== */
+
+
+
+/* Project Section */
 
 #my-work-section {
   display: flex;
@@ -114,86 +99,117 @@ img {
   flex-wrap: wrap;
 }
 
-.project-card {
-  max-width: calc((100% - 32px) / 3);
+    /* Project Cards */
+
+    .project-card {
+      max-width: calc((100% - 32px) / 3);
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .project-card-text-container {
+      flex-direction: column;
+      display: flex;
+      gap: 16px
+    }
+
+    .project-image {
+      border-radius: 10px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+
+
+
+/* Project Pages */
+
+#project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-header-image {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+#project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-details-content {
   display: flex;
   flex-direction: column;
   gap: 34px;
 }
 
-.project-card-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+    /* Project Gallery */
 
-.project-image {
-  border-radius: 10px;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-}
+    #project-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
 
-/* ===========================
-   NAVBAR
-   =========================== */
+    .project-gallery-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px 16px;
+    }
 
-.navbar {
-  width: 100%;
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: transparent; /* desktop default */
-  z-index: 9999;
-}
+    .gallery-image-container {
+      border-radius: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-.nav-title-link {
-  color: black;
-  text-decoration: none;
-}
+    .gallery-image-container.half-width {
+      width: calc((100% - 16px) / 2);
+    }
 
-.nav-title-link:hover {
-  text-decoration: underline;
-}
+    .gallery-image {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+    }
 
-/* ===========================
-   FOOTER
-   =========================== */
 
-#footer {
-  width: 100%;
-  display: flex;
-  padding: 30px 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-/* ===========================
-   RESPONSIVE MEDIA QUERIES
-   =========================== */
-
-/* Medium / small laptops */
+/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1600px) {
-  #main-content { margin: 100px 275px; }
+  #main-content {
+    margin: 225px 275px;
+  }
 }
 
+/* Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1200px) {
-  #main-content { margin: 100px 175px; }
+  #main-content {
+    margin: 225px 175px;
+  }
 }
 
+/* Large devices (laptops/desktops, 1000px and below) */
 @media only screen and (max-width: 1000px) {
-  #main-content { margin: 100px 75px; }
+  #main-content {
+    margin: 225px 75px;
+  }
 }
 
-/* Tablets / small devices */
+/* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {
-  #main-content { margin: 80px 50px; }
+  #main-content {
+    margin: 150px 50px;
+  }
 
   #portfolio-header {
     flex-direction: column;
@@ -202,66 +218,75 @@ img {
   .project-card {
     max-width: calc((100% - 16px) / 2);
   }
-
-  .navbar {
-    background-color: white !important; /* mobile navbar always white */
-  }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
-  #main-content { margin: 70px 20px; }
-  .project-card { max-width: 100%; }
-}
-
-/* Final mobile adjustments for <=768px */
-@media only screen and (max-width: 768px) {
-
-  #portfolio-header {
-    flex-direction: column;
-  }
-
-  #portfolio-header-image-container,
-  #portfolio-header-text-container {
-    flex-basis: 100%;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  /* Text and images full width */
-  .text,
-  .image,
-  .icon-link {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* Timeline / stacked text adjustments */
-  .text {
-    padding-left: 0;
-    line-height: 1.45;
-    font-size: 18px;
-    order: unset;
-  }
-
-  .icon-link {
-    order: unset;
-    float: none !important;
-    display: block;
-    margin: 10px 0;
-    margin-left: 0 !important;
-  }
-
-  .icon-link img,
-  .container .image img {
-    float: none !important;
-    display: block;
-    margin: 10px 0;
-    margin-left: 0 !important;
+  #main-content {
+    margin: 125px 20px;
   }
 
   .project-card {
     max-width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+ }
+ 
+ img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;                  
+ }
+ 
+ .text {
+   font-size: 20px;
+   padding-left: 15px;
+ }
+/* ===========================
+   MOBILE: ICON LINKS ABOVE BUTTON LINKS
+   =========================== */
+@media only screen and (max-width: 800px) {
+
+  /* Stack timeline / content rows vertically */
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Paragraph text first */
+  .container .text {
+    order: 1;
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 1.45;
+    width: 100%;
+  }
+
+  /* Icon/image links second */
+  .icon-link {
+    order: 2;
+    display: block;
+    margin-top: 12px;
+    margin-left: 0 !important;
+    float: none !important;
+  }
+
+  .icon-link img {
+    display: block;
+    margin-left: 0 !important;
+  }
+
+  /* Button-only links last */
+  .button {
+    order: 3;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #main-content {
+    margin-top: calc(125px + env(safe-area-inset-top));
   }
 }
